@@ -1,0 +1,99 @@
+* {
+    transition: background 500ms in_out_cubic, color 500ms in_out_cubic;
+}
+
+Screen {
+    layers: base overlay dropdown notes notifications;
+    overflow: hidden;
+}
+
+MainGrid {
+    height: auto;
+    margin: 1 0;
+    padding: 1 2;
+    layout: grid;
+    grid-size: 2 1;
+    background: $boost;
+    border: wide black;
+    grid-gutter: 2;
+}
+
+Grid.main {
+    grid-size: 2 1;
+    grid-gutter: 2;
+    border: round white;
+    overflow-x: hidden;
+
+}
+
+.panel-container {
+    overflow: hidden;
+    height: auto;
+}
+
+.panel-content {
+    background: $boost;
+    border: wide black;
+    overflow-y: auto;
+    height: 95%;
+}
+
+.panel-header {
+    height: 5%;
+}
+
+ArtifactResult {
+    background: $boost;
+    width: 100%;
+    height: auto;
+    padding: 1;
+    margin: 1 0;
+    border: tall black;
+}
+
+Title {
+    height: 10%;
+}
+
+FilterPanel {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+FilterField {
+    height: auto;
+    padding: 1 0;
+}
+
+ResultPanel {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+Dropdown {
+    background: $boost;
+    /* overflow: hidden; */
+    layer: dropdown;
+    /* height: 100%; */
+}
+
+/*
+DropdownOptions {
+    background: white;
+    grid-columns: 1;
+    grid-rows: 4;
+} */
+
+/* DropdownButton {
+    background: $boost;
+    border: wide black;
+    padding: 1 2;
+    margin: 1 0;
+} */
+
+.panel-header TitleCount {
+    width: auto;
+    padding-right: 1;
+}

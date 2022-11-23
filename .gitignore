@@ -1,0 +1,7 @@
+run.py
+getrepos.py
+artifacts.json
+artifacts.pickle
+versions.json
+.DS_Store
+*.pyc

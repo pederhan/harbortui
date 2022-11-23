@@ -1,0 +1,148 @@
+Screen {
+    layers: bottom main top overlay;
+    overflow: hidden;
+}
+
+Header {
+    layer: overlay;
+}
+
+
+#search-bar-container {
+    dock: top;
+    layout: horizontal;
+    width: 100%;
+    height: 1;
+}
+
+#search-bar:focus-within {
+    background: $background-lighten-1;
+}
+
+SearchBar {
+    padding: 0;
+    border: none;
+    height: 1;
+    width: 1fr;
+}
+
+#search-input {
+    padding-left: 1;
+}
+
+#search-prompt {
+    width: 3;
+    padding: 0 1;
+    background: $success;
+    color: $text;
+}
+
+
+#search-completion>.search-completion--selected-item {
+    color: $text;
+    background: $background-lighten-2;
+    text-style: bold;
+}
+
+#search-completion {
+    padding-right: 1;
+    height: auto;
+    border-left: wide $success-darken-1;
+}
+
+#search-completion-container {
+    dock: top;
+    width: 30;
+    margin-top: 1;
+    overflow: hidden auto;
+    height: auto;
+    max-height: 14;
+    layer: overlay;
+    scrollbar-size-vertical: 1;
+    scrollbar-color: $success;
+    background: $boost;
+    display: none;
+}
+
+#search-completion-context {
+    height: 1;
+    color: $text;
+    background: $background-darken-1;
+}
+
+#object-panel {
+    height: auto;
+    padding-right: 1;
+}
+
+#body-container {
+    background: $background;
+    overflow: hidden auto;
+    padding: 1 0 1 1;
+    scrollbar-gutter: stable;
+    scrollbar-size-vertical: 1;
+    scrollbar-color: $success;
+}
+
+.notification {
+    dock: bottom;
+    layer: notification;
+    width: 100%;
+    margin: 0 0;
+    padding: 1 2;
+    background: $background;
+    color: $text;
+    height: auto;
+}
+
+ProgramOption:hover {
+    background: $background-lighten-2;
+}
+
+.-active {
+    background: $background-lighten-2;
+}
+
+ProgramOption {
+    padding: 1 2;
+    background: $secondary-background;
+    color: $text;
+    height: 1;
+    border: $secondary;
+    width: 25%;
+}
+
+.project-buttons {
+    grid-size: 3;
+    layout: grid;
+}
+
+/*
+ProjectSelection Grid Button {
+    padding: 1 2;
+    background: $secondary-background;
+    color: $text;
+    height: 1;
+    border: $secondary;
+    width: 25%;
+} */
+
+TextLog {
+    background: $surface;
+    color: $text;
+    height: 50vh;
+    dock: bottom;
+    layer: notes;
+    border-top: hkey $primary;
+    offset-y: 0;
+    transition: offset 400ms in_out_cubic;
+    padding: 0 1 1 1;
+}
+
+TextLog:focus {
+    offset: 0 0 !important;
+}
+
+TextLog.-hidden {
+    offset-y: 100%;
+}
